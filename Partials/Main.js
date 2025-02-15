@@ -9,10 +9,18 @@ function rejectCookies() {
 }
 
 window.onload = function() {
-    if (document.cookie.includes("cookie_consent=accepted")) {
-        let cookieBox = document.getElementById("cookieBox");
-        if (cookieBox) {
-            cookieBox.style.display = "none";
-        }
+    let cookieBox = document.getElementById("cookieBox");
+    if (cookieBox) {
+        cookieBox.style.display = "block";
+        document.cookie = "cookie_consent=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
     }
 };
+
+function toggleTerms() {
+    let termsBox = document.getElementById("termsBox");
+    if (termsBox.style.display === "none" || termsBox.style.display === "") {
+        termsBox.style.display = "block";
+    } else {
+        termsBox.style.display = "none";
+    }
+}

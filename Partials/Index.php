@@ -12,21 +12,24 @@ if (!isset($_COOKIE["cookieConsent"])) {
         <script defer src="Main.js"></script>
     </head>
     <body>
-        <div id="cookieBox" class="cookieBox">
-            <p>This website uses cookies to enhance your experience. For more information, please read our policy.</p>
-            <div id="termsBox" style="display: none; margin-top: 10px; border: 1px solid #63BDB5; padding: 10px; border-radius: 5px;">
-                <h1>Algemene voorwaarden</h1>
-                <p>Wetgeving in Nederland (en Europa)</p>
-                <p>De Nederlandse Auteurswet (1912): Copyright ontstaat automatisch bij het creëren van een werk.</p>
-                <p>Rechten van de auteur: Het recht om je werk te reproduceren en te verspreiden.</p>
-                <p>Bescherming duurt tot 70 jaar na de dood van de auteur.</p>
-                <p>Software Richtlijn (91/250/EEG): Beschermt softwarecode als een "literaire creatie".</p>
-                <p>Database Richtlijn (96/9/EG): Beschermt databanken tegen kopiëren van "substantiële delen".</p>
-            </div>
-            <button onclick="acceptCookies()">Accept</button>
-            <button onclick="rejectCookies()">Reject</button>
+    <div id="cookieBox" class="cookieBox">
+        <p>This website uses cookies to enhance your experience. For more information, please read our policy.</p>
+
+        <button onclick="toggleTerms()">Show Terms & Conditions</button> 
+        <div id="termsBox">
+            <h1>Algemene voorwaarden</h1>
+            <p>Wetgeving in Nederland (en Europa)</p>
+            <p>De Nederlandse Auteurswet (1912): Copyright ontstaat automatisch bij het creëren van een werk.</p>
+            <p>Rechten van de auteur: Het recht om je werk te reproduceren en te verspreiden.</p>
+            <p>Bescherming duurt tot 70 jaar na de dood van de auteur.</p>
+            <p>Software Richtlijn (91/250/EEG): Beschermt softwarecode als een "literaire creatie".</p>
+            <p>Database Richtlijn (96/9/EG): Beschermt databanken tegen kopiëren van "substantiële delen".</p>
         </div>
-    </body>
+
+        <button onclick="acceptCookies()">Accept</button>
+        <button onclick="rejectCookies()">Reject</button>
+    </div>
+</body>
     </html>';
     exit();
 }
