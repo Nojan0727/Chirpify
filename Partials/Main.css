@@ -1,0 +1,35 @@
+.cookieBox {
+    background-color: rgba(240, 240, 240, 0.9);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    max-width: 90%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.cookieBox p {
+    color: black;
+    margin-bottom: 10px;
+}
+
+.cookieBox button {
+    background-color: lightblue;
+    color: black;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cookieBox button:hover {
+    background-color: #b3e0ff;
+}

@@ -1,0 +1,61 @@
+<?php
+include "header.php";
+session_start();
+if (!isset($_COOKIE["cookieConsent"])) {
+    echo '<!doctype html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Chirpify - Cookie Consent</title>
+        <link rel="stylesheet" href="Main.css">
+        <script defer src="Main.js"></script>
+    </head>
+    <body>
+        <div id="cookieBox" class="cookieBox">
+            <p>This website uses cookies to enhance your experience. For more information, please read our policy.</p>
+            <div id="termsBox" style="display: none; margin-top: 10px; border: 1px solid #63BDB5; padding: 10px; border-radius: 5px;">
+                <h1>Algemene voorwaarden</h1>
+                <p>Wetgeving in Nederland (en Europa)</p>
+                <p>De Nederlandse Auteurswet (1912): Copyright ontstaat automatisch bij het creëren van een werk.</p>
+                <p>Rechten van de auteur: Het recht om je werk te reproduceren en te verspreiden.</p>
+                <p>Bescherming duurt tot 70 jaar na de dood van de auteur.</p>
+                <p>Software Richtlijn (91/250/EEG): Beschermt softwarecode als een "literaire creatie".</p>
+                <p>Database Richtlijn (96/9/EG): Beschermt databanken tegen kopiëren van "substantiële delen".</p>
+            </div>
+            <button onclick="acceptCookies()">Accept</button>
+            <button onclick="rejectCookies()">Reject</button>
+        </div>
+    </body>
+    </html>';
+    exit();
+}
+?>
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chirpify - Login</title>
+    <link rel="stylesheet" href="Main.css">
+    <script defer src="Main.js"></script>
+</head>
+<body>
+
+<div class="loginContainer">
+    <h2>Login</h2>
+    <form action="/Partials/Login.php" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Username" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Password" required>
+
+        <button type="submit">Login</button>
+    </form>
+    <p>Don't have an account? <a href="/Partials/register.php">Register</a></p>
+</div>
+
+</body>
+</html>
