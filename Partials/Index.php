@@ -26,8 +26,8 @@ if (!isset($_COOKIE["cookieConsent"])) {
             <p>Database Richtlijn (96/9/EG): Beschermt databanken tegen kopiëren van "substantiële delen".</p>
         </div>
 
-        <button onclick="acceptCookies()">Accept</button>
-        <button onclick="rejectCookies()">Reject</button>
+        <button onclick="AcceptCookies()">Accept</button>
+        <button onclick="RejectCookies()">Reject</button>
     </div>
 </body>
     </html>';
