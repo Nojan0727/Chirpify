@@ -279,7 +279,6 @@ p a:hover {
     display: flex;
     height: 60px;
     top: 0px;
-    width: 100%;
 }
 
 .left-h {
@@ -361,7 +360,7 @@ p a:hover {
 .nav-bar {
     position: fixed;
     display: flex;
-    width: 350px;
+    width: 356px;
     top: 50px;
     left: 0;
     border-right: 1px solid rgb(70, 70, 70);
