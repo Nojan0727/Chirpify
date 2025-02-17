@@ -1,8 +1,10 @@
 <?php
-include "header.php";
 session_start();
-if (!isset($_COOKIE["cookieConsent"])) {
-    echo '<!doctype html>
+include "header.php";
+
+if (!isset($_COOKIE["cookie_consent"])) {
+    ?>
+    <!doctype html>
     <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -12,11 +14,12 @@ if (!isset($_COOKIE["cookieConsent"])) {
         <script defer src="Main.js"></script>
     </head>
     <body>
+
     <div id="cookieBox" class="cookieBox">
         <p>This website uses cookies to enhance your experience. For more information, please read our policy.</p>
+        <button onclick="toggleTerms()">Show Terms & Conditions</button>
 
-        <button onclick="toggleTerms()">Show Terms & Conditions</button> 
-        <div id="termsBox">
+        <div id="termsBox" style="display: none;">
             <h1>Algemene voorwaarden</h1>
             <p>Wetgeving in Nederland (en Europa)</p>
             <p>De Nederlandse Auteurswet (1912): Copyright ontstaat automatisch bij het creëren van een werk.</p>
@@ -26,11 +29,13 @@ if (!isset($_COOKIE["cookieConsent"])) {
             <p>Database Richtlijn (96/9/EG): Beschermt databanken tegen kopiëren van "substantiële delen".</p>
         </div>
 
-        <button onclick="AcceptCookies()">Accept</button>
-        <button onclick="RejectCookies()">Reject</button>
+        <button onclick="acceptCookies()">Accept</button>
+        <button onclick="rejectCookies()">Reject</button>
     </div>
-</body>
-    </html>';
+
+    </body>
+    </html>
+    <?php
     exit();
 }
 ?>
@@ -48,16 +53,16 @@ if (!isset($_COOKIE["cookieConsent"])) {
 
 <div class="loginContainer">
     <h2>Login</h2>
-    <form action="/Partials/Login.php" method="POST">
+    <form action="login.php" method="POST">
         <label for="username">Username:</label>
-        <input type="text" id="username" name="username" placeholder="Username" required>
+        <input type="text" name="username" id="username" placeholder="Username" required>
 
         <label for="password">Password:</label>
-        <input type="password" id="password" name="password" placeholder="Password" required>
+        <input type="password" name="password" id="password" placeholder="Password" required>
 
         <button type="submit">Login</button>
     </form>
-    <p>Don't have an account? <a href="/Partials/register.php">Register</a></p>
+    <p>Don't have an account? <a href="register.php">Register</a></p>
 </div>
 
 </body>

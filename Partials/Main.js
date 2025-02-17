@@ -1,15 +1,31 @@
-console.log("Current Path: ", window.location.pathname);
-function AcceptCookies() {
+function acceptCookies() {
+    console.log("Accept button clicked!");
     document.cookie = "cookie_consent=accepted; path=/; max-age=" + (60 * 60 * 24 * 30);
+
+
+    if (document.cookie.includes("cookie_consent=accepted")) {
+        console.log("Cookie was set successfully!");
+    } else {
+        console.log("Failed to set cookie.");
+    }
+
     document.getElementById("cookieBox").style.display = "none";
+    location.reload();
 }
 
-function RejectCookies() {
+function rejectCookies() {
+    console.log("Reject button clicked!");
     window.location.href = "https://www.google.com";
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    if (document.cookie.includes("cookie_consent=accepted")) {
-        document.getElementById("cookieBox").style.display = "none";
-    }
+    console.log("JavaScript Loaded!");
 });
+function toggleTerms() {
+    let termsBox = document.getElementById("termsBox");
+    if (termsBox.style.display === "none" || termsBox.style.display === "") {
+        termsBox.style.display = "block";
+    } else {
+        termsBox.style.display = "none";
+    }
+}
