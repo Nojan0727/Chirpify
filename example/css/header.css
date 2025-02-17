@@ -1,0 +1,82 @@
+.header {
+    position: fixed;
+    display: flex;
+    height: 60px;
+}
+
+.left-h {
+    display: flex;
+    width: 350px;
+}
+.chirpify-logo {
+    height: 40px;
+    position: relative;
+    top: 10px;
+    left: 90px;
+}
+.left-h li  {
+    list-style: none;
+    text-decoration: none;
+    position: relative;
+    left: 16px;
+}
+.left-h a {
+    text-decoration: none;
+}
+.left-h h3  {
+    position: relative;
+    left: 135px; top: -24px;
+    color: white;
+    text-decoration: none;
+}
+.chirpify-logo:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+
+.middle-h {
+    display: flex;
+    flex: 1;
+    min-width: 580px;
+    border: 1px solid rgb(70, 70, 70);
+}
+.middle-h button {
+    background-color:transparent;
+    position: relative;
+    flex: 1;
+    border: none;
+    color: white;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 500;
+}
+.middle-h button:hover{
+    background-color: rgba(204, 204, 204, 0.208);
+    cursor: pointer;
+    transition: background-color 0.4s;
+}
+
+.right-h {
+    display: flex;
+    width: 499px;
+}
+.right-h input {
+    position: relative;
+    left: 50px;
+    top: 7px;
+    height: 40px;
+    width: 320px;
+    border: 1px solid rgb(70, 70, 70);
+    border-radius: 50px;
+    background-color: transparent;
+}
+.right-h input::placeholder{
+    position: relative;
+    left: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+}
+
+.chirpify-logo {
+
+}
