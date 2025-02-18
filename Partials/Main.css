@@ -14,11 +14,9 @@ body {
     color: white;
     display: flex;
     justify-content: center;
-    align-items: center;
     height: 100vh;
     flex-direction: column;
     margin: 0;
-    padding: 10px;
 }
 
 .cookieBox {
@@ -238,7 +236,6 @@ p a:hover {
 
     nav ul li {
         display: block;
-        margin-bottom: 10px;
     }
 
     .cookieBox {
@@ -283,9 +280,10 @@ p a:hover {
 
 .left-h {
     position: relative;
-    left: -9px;
+    left: 0px;
     display: flex;
     width: 350px;
+
 }
 .chirpify-logo {
     height: 40px;
@@ -336,6 +334,8 @@ p a:hover {
 }
 
 .right-h {
+    position: relative;
+    top: -10;
     display: flex;
     width: 499px;
 }
@@ -360,7 +360,7 @@ p a:hover {
 .nav-bar {
     position: fixed;
     display: flex;
-    width: 356px;
+    width: 350px;
     top: 50px;
     left: 0;
     border-right: 1px solid rgb(70, 70, 70);
@@ -375,7 +375,7 @@ p a:hover {
 }
 
 .nav-bar li {
-    line-height: 60px;
+    line-height: 50px;
 }
 
 .nav-bar ul li a{
@@ -388,7 +388,7 @@ p a:hover {
     font-size: 25px;
     text-decoration: none;
     font-size: 20px;
-    flex: 1;
+    align-items: center;
 }
 
 .nav-bar i {
@@ -401,7 +401,7 @@ p a:hover {
 
 .down {
     position: relative;
-    top: 0;
+    top: 40px;
     
 }
 
@@ -411,4 +411,6 @@ p a:hover {
     text-decoration: none;
     
 }
+
+
 
