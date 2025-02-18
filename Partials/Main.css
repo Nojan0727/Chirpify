@@ -271,54 +271,54 @@ p a:hover {
 }
 
 
-.header-sami {
+.headerSami {
     position: fixed;
     display: flex;
     height: 60px;
     top: 0px;
 }
 
-.left-h {
+.leftHeader {
     position: relative;
     left: 0px;
     display: flex;
     width: 350px;
 
 }
-.chirpify-logo {
+.chirpifyLogo {
     height: 40px;
     position: relative;
     top: 10px;
     left: 90px;
 }
-.left-h li  {
+.leftHeader li  {
     list-style: none;
     text-decoration: none;
     position: relative;
     left: 16px;
 }
-.left-h a {
+.leftHeader a {
     text-decoration: none;
 }
-.left-h h3  {
+.leftHeader h3  {
     position: relative;
     left: 135px; top: -24px;
     color: white;
     text-decoration: none;
 }
-.chirpify-logo:hover{
+.chirpifyLogo:hover{
     opacity: 0.8;
     cursor: pointer;
 }
 
 
-.middle-h {
+.middleHeader {
     display: flex;
     flex: 1;
     min-width: 580px;
     border: 1px solid rgb(70, 70, 70);
 }
-.middle-h button {
+.middleHeader button {
     background-color:transparent;
     position: relative;
     flex: 1;
@@ -327,19 +327,19 @@ p a:hover {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: 500;
 }
-.middle-h button:hover{
+.middleHeader button:hover{
     background-color: rgba(204, 204, 204, 0.208);
     cursor: pointer;
     transition: background-color 0.4s;
 }
 
-.right-h {
+.rightHeader {
     position: relative;
     top: -10;
     display: flex;
     width: 499px;
 }
-.right-h input {
+.rightHeader input {
     position: relative;
     left: 50px;
     top: 7px;
@@ -349,7 +349,7 @@ p a:hover {
     border-radius: 50px;
     background-color: transparent;
 }
-.right-h input::placeholder{
+.rightHeader input::placeholder{
     position: relative;
     left: 10px;
     color: rgb(255, 255, 255);
@@ -357,7 +357,7 @@ p a:hover {
 }
 
 
-.nav-bar {
+.navBar {
     position: fixed;
     display: flex;
     width: 350px;
@@ -368,17 +368,17 @@ p a:hover {
 
 }
 
-.nav-bar ul {
+.navBar ul {
     list-style: none;
     display: flex;
     flex-direction: column;
 }
 
-.nav-bar li {
+.navBar li {
     line-height: 50px;
 }
 
-.nav-bar ul li a{
+.navBar ul li a{
     position: relative;
     top: 30px;
     padding: 10px 16px 10px 16px;
@@ -391,11 +391,11 @@ p a:hover {
     align-items: center;
 }
 
-.nav-bar i {
+.navBar i {
     padding-right:10px ;
 }
 
-.nav-bar a {
+.navBar a {
     font-size: 100px;
 }
 
@@ -405,7 +405,7 @@ p a:hover {
     
 }
 
-.nav-bar a:hover {
+.navBar a:hover {
     background-color: rgba(201, 201, 201, 0.153);
     transition: 0.2s;
     text-decoration: none;
