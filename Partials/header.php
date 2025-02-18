@@ -14,7 +14,7 @@ session_start();
 
 <header>
     <div class="logo">
-        <a href="login.php"><img class="chirpify-logo" src="Image/Chripify.png" alt="">
+            <img class="chirpify-logo" src="Image/Chripify.png" alt="Chirpify Logo" <h1 class="logo">Chirpify</h1>
     </div>
     <nav>
         <ul>
