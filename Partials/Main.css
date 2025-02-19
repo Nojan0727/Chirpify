@@ -33,7 +33,7 @@ body {
     max-width: 90%;
     max-height: 80vh;
     overflow-y: auto;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     z-index: 1000;
 }
 
@@ -44,7 +44,7 @@ body {
     border-radius: 5px;
     background-color: white;
     color: black;
-    display: none; /* Starts hidden */
+    display: none;
 }
 
 .cookieBox button {
@@ -61,7 +61,36 @@ body {
 .cookieBox button:hover {
     background-color: #b3e0ff;
 }
+.LoginContainer {
+    width: 300px;
+    background: black;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
+.LoginContainer input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background: white;
+}
+
+.LoginContainer button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: lightblue;
+    cursor: pointer;
+}
 header {
     background-color: black;
     color: white;
@@ -106,7 +135,7 @@ nav ul li a:hover {
     border-radius: 8px;
     text-align: center;
     width: 350px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     margin-top: 60px;
 }
 
@@ -192,7 +221,7 @@ p a:hover {
     border-radius: 8px;
     text-align: center;
     width: 350px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     margin-top: 60px;
 }
 
@@ -275,12 +304,12 @@ p a:hover {
     position: fixed;
     display: flex;
     height: 60px;
-    top: 0px;
+    top: 0;
 }
 
 .leftHeader {
     position: relative;
-    left: 0px;
+    left: 0;
     display: flex;
     width: 350px;
     transition: 1s;
@@ -339,7 +368,7 @@ p a:hover {
 
 .rightHeader {
     position: relative;
-    top: -10;
+    top: -10px;
     display: flex;
     width: 499px;
 }
@@ -394,7 +423,6 @@ p a:hover {
     color: rgb(255, 255, 255);
     font-size: 25px;
     text-decoration: none;
-    font-size: 20px;
     align-items: center;
     transition: 1s;
 }
