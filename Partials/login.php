@@ -4,7 +4,7 @@ session_start();
 
 if (isset($_SESSION['user']) || isset($_COOKIE['remembered_user'])) {
     $_SESSION['user'] = isset($_COOKIE['remembered_user']) ? $_COOKIE['remembered_user'] : $_SESSION['user'];
-    header("Location: home.php");
+    header("Location: ../Partials/homepage.html");
     exit();
 }
 
@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             setcookie("remembered_user", $username, time() + (86400 * 30), "/");
         }
 
-        header("Location: home.php");
+        header("Location: ../Partials/homepage.html");
         exit();
     } else {
         $error = "Username or Password is incorrect!";

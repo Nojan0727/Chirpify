@@ -14,7 +14,7 @@ session_start();
 
 <header>
     <div class="logo">
-        <h1>Chirpify</h1>
+            <img class="chirpify-logo" src="Image/Chripify.png" alt="Chirpify Logo" <h1 class="logo">Chirpify</h1>
     </div>
     <nav>
         <ul>

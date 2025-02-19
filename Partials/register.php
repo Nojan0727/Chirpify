@@ -1,7 +1,6 @@
 <?php
 include "header.php";
 session_start();
-
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
@@ -12,40 +11,40 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $bio = trim(isset($_POST['bio']) ? $_POST['bio'] : '');
     $error = "";
 
-    if (empty($username) || empty($password) || empty($age) || empty($bio)) {
-        $error = "All fields are required!";
-    } elseif (!is_numeric($age) || $age < 13) {
-        $error = "You must be at least 13 years old.";
-    } else {
-        if (isset($_FILES['profile_picture']) && $_FILES['profile_picture']['error'] === 0) {
-            $upload_dir = "uploads/";
+    $upload_dir = "../uploads/";
+    $real_upload_dir = __DIR__ . "/../uploads/";
 
-            if (!is_dir($upload_dir)) {
-                mkdir($upload_dir, 0777, true);
-            }
+    if (!is_dir($real_upload_dir)) {
+        mkdir($real_upload_dir, 0777, true);
+    }
 
-            $file_name = basename($_FILES["profile_picture"]["name"]);
-            $target_file = $upload_dir . $file_name;
-            $allowed_types = ["image/jpeg", "image/png", "image/gif"];
+    if (isset($_FILES['profile_picture']) && $_FILES['profile_picture']['error'] === 0) {
+        $file_ext = pathinfo($_FILES["profile_picture"]["name"], PATHINFO_EXTENSION);
+        $file_name = uniqid() . "." . $file_ext;
+        $target_file = $real_upload_dir . $file_name;
 
-            if (!in_array($_FILES["profile_picture"]["type"], $allowed_types)) {
-                $error = "Only JPG, PNG, and GIF files are allowed.";
-            } elseif (move_uploaded_file($_FILES["profile_picture"]["tmp_name"], $target_file)) {
-                $_SESSION['profile_picture'] = $target_file;
+        $allowed_types = ['jpg', 'jpeg', 'png', 'gif'];
+        if (!in_array(strtolower($file_ext), $allowed_types)) {
+            $error = "Invalid file type. Only JPG, PNG, and GIF are allowed.";
+        } else {
+            if (move_uploaded_file($_FILES["profile_picture"]["tmp_name"], $target_file)) {
+                $_SESSION['profile_picture'] = $upload_dir . $file_name;
             } else {
                 $error = "Error uploading file.";
             }
         }
+    }
 
-        if (empty($error)) {
-            $_SESSION['user'] = $username;
-            $_SESSION['age'] = $age;
-            $_SESSION['bio'] = $bio;
-            $_SESSION['password'] = password_hash($password, PASSWORD_DEFAULT);
+    if (empty($error)) {
+        $_SESSION['user'] = $username;
+        $_SESSION['age'] = $age;
+        $_SESSION['bio'] = $bio;
+        $_SESSION['password'] = password_hash($password, PASSWORD_DEFAULT);
 
-            header("Location: home.php");
-            exit();
-        }
+        header("Location: ../Partials/homepage.html");
+        exit();
+    } else {
+        echo "<p style='color:red;'>$error</p>";
     }
 }
 ?>
@@ -56,7 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Register</title>
-    <link rel="stylesheet" href="Main.css">
+    <link rel="stylesheet" href="../Main.css">
 </head>
 <body>
 <div class="container">
