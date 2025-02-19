@@ -21,7 +21,7 @@ body {
 
 .cookieBox {
     background-color: rgba(240, 240, 240, 0.9);
-    backdrop-filter: blur(100px);
+    backdrop-filter: blur(10px);
     padding: 20px;
     border-radius: 8px;
     text-align: center;
@@ -33,7 +33,7 @@ body {
     max-width: 90%;
     max-height: 80vh;
     overflow-y: auto;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     z-index: 1000;
 }
 
@@ -106,7 +106,7 @@ nav ul li a:hover {
     border-radius: 8px;
     text-align: center;
     width: 350px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
     margin-top: 60px;
 }
 
@@ -192,7 +192,7 @@ p a:hover {
     border-radius: 8px;
     text-align: center;
     width: 350px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
     margin-top: 60px;
 }
 
@@ -275,7 +275,7 @@ p a:hover {
     position: fixed;
     display: flex;
     height: 60px;
-    top: 0;
+    top: 0px;
 }
 
 .leftHeader {
@@ -283,6 +283,7 @@ p a:hover {
     left: 0px;
     display: flex;
     width: 350px;
+    transition: 1s;
 
 }
 .chirpifyLogo {
@@ -290,6 +291,7 @@ p a:hover {
     position: relative;
     top: 10px;
     left: 90px;
+    transition: 1s;
 }
 .leftHeader li  {
     list-style: none;
@@ -299,12 +301,14 @@ p a:hover {
 }
 .leftHeader a {
     text-decoration: none;
+    transition: 1s;
 }
 .leftHeader h3  {
     position: relative;
     left: 135px; top: -24px;
     color: white;
     text-decoration: none;
+    transition: 1s;
 }
 .chirpifyLogo:hover{
     opacity: 0.8;
@@ -348,6 +352,7 @@ p a:hover {
     border: 1px solid rgb(70, 70, 70);
     border-radius: 50px;
     background-color: transparent;
+    transition: 1s;
 }
 .rightHeader input::placeholder{
     position: relative;
@@ -365,6 +370,7 @@ p a:hover {
     left: 0;
     border-right: 1px solid rgb(70, 70, 70);
     height: 700px;
+    transition: 1s;
 
 }
 
@@ -376,6 +382,7 @@ p a:hover {
 
 .navBar li {
     line-height: 50px;
+    align-items: center;
 }
 
 .navBar ul li a{
@@ -387,7 +394,10 @@ p a:hover {
     color: rgb(255, 255, 255);
     font-size: 25px;
     text-decoration: none;
-
+    font-size: 20px;
+    align-items: center;
+    transition: 1s;
+}
 
 .navBar i {
     padding-right:10px ;
@@ -408,4 +418,133 @@ p a:hover {
     transition: 0.2s;
     text-decoration: none;
     
+}
+
+
+
+@media (max-width: 1350px){
+    .leftHeader {
+        width: 200px;
+        transition: 1s ease-out;
+        position: relative;
+        left: 10px;
+    }
+    .chirpifyLogo{
+        position: relative;
+        left: -8px;
+        transition: 1s ease-out;
+    }
+    .leftHeader h3 {
+        position: relative;
+        left: 30px;
+        transition: 1s ease-out;
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .navBar {
+        width: 201px;
+        transition: 1s ease-out;
+    }
+    .navBar ul li a {
+        position: relative;
+        left: 10px;
+        transition: 1s ease-out;
+
+    }
+
+    .navBar span {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 1200px){
+    .leftHeader {
+        width: 80px;
+        transition: 1s ease-out;
+        position: relative;
+        left: 10px;
+    }
+
+    .navBar {
+        width: 81px;
+        transition: 1s ease-out;
+    }
+
+
+
+    .leftHeader h3 {
+        visibility: hidden; 
+        transition: opacity 0.5s ease, visibility 0s ease 0s;  
+    }
+    .navBar span{
+        display: none;
+        opacity: 1;
+    }
+}
+
+@media (max-width:1060px){
+
+
+    .rightHeader input {
+       width: 230px;
+       transition: 1s;
+    }
+}
+
+@media (max-width:970px){
+    .rightHeader {
+        display:none;
+    }
+    .leftHeader {
+        width: 200px;
+        transition: 1s ease-out;
+        position: relative;
+        left: 10px;
+        
+    }
+    .chirpifyLogo{
+        position: relative;
+        left: 58px;
+        transition: 1s ease-out;
+
+    }
+
+    .navBar {
+        width: 201px;
+        transition: 1s ease-out;
+    }
+    .navBar ul li a {
+        position: relative;
+        left: 71px;
+        transition: 1s ease-out;
+
+    }
+}
+
+@media (max-width:800px) {
+    .leftHeader {
+        width: 80px;
+        transition: 1s ease-out;
+        position: relative;
+        left: 10px;
+        
+    }
+    .chirpifyLogo{
+        position: relative;
+        left: -8px;
+        transition: 1s ease-out;
+
+    }
+
+    .navBar {
+        width: 81px;
+        transition: 1s ease-out;
+    }
+    .navBar ul li a {
+        position: relative;
+        left: 10px;
+        transition: 1s ease-out;
+
+    }
 }
