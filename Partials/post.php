@@ -67,7 +67,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <?php endforeach; ?>
 <?php else: ?>
 <p>No posts yet.</p>
-<?php endif; ?>
+<?php endif; ?>     
 </body>
 </html>
 
