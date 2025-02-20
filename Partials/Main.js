@@ -29,3 +29,9 @@ function toggleTerms() {
         termsBox.style.display = "none";
     }
 }
+function likePost(index) {
+    alert('Liked post ' + index);
+}
+function repost(index) {
+    alert('Reposted post ' + index);
+}
