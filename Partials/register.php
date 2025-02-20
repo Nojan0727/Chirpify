@@ -41,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $_SESSION['bio'] = $bio;
         $_SESSION['password'] = password_hash($password, PASSWORD_DEFAULT);
 
-        header("Location: ../Partials/homepage.html");
+        header("Location: ../Partials/acount.php");
         exit();
     } else {
         echo "<p style='color:red;'>$error</p>";

@@ -48,8 +48,12 @@ include "header.php";
     </nav>
 
 
-    <div class="body"></div>
+    <div class="body">
+        
+
+    </div>
 </body>
 </html>
+
 
 
