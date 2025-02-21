@@ -305,6 +305,8 @@ p a:hover {
     display: flex;
     height: 60px;
     top: 0;
+    background-color: black;
+    z-index: 1000;
 }
 
 .leftHeader {
@@ -350,6 +352,7 @@ p a:hover {
     flex: 1;
     min-width: 580px;
     border: 1px solid rgb(70, 70, 70);
+    
 }
 .middleHeader button {
     background-color:transparent;
@@ -421,7 +424,7 @@ p a:hover {
     border-radius: 15px;
     left: 96px;
     color: rgb(255, 255, 255);
-    font-size: 25px;
+    font-size: 20px;
     text-decoration: none;
     align-items: center;
     transition: 1s;
@@ -447,6 +450,86 @@ p a:hover {
     text-decoration: none;
     
 }
+
+.navBar span {
+    font-size: 15px;
+}
+
+.body {
+    position: relative;
+    margin-top: 60px;
+    left: 350px;
+    height: 100%;
+    width:580px ;
+    border-right: 1px solid rgb(70, 70, 70);
+    transition: 1s ease-out;
+}
+
+.happening {
+    width: 580px;
+    height: 130px;
+    z-index: 100;
+    border-bottom: 1px solid rgb(70, 70, 70);
+}
+.profileImg{
+    position: relative;
+    top: 10px;
+    left: -93px;
+    margin-left: 100px;
+    width: 60px;
+    border-radius: 60px;
+    cursor: pointer;
+}
+
+.form {
+    position: relative;
+    left: 200px;
+    top: -20px;
+}
+.form input {
+    position: relative;
+    right: 200px;
+    top: -20px;
+    width: 120px;
+    height: 40px;
+    background-color: black;
+    border: none;
+    cursor: pointer;
+}
+
+.form textarea {
+    position: relative;
+    top: -17px;
+    left: -130px;
+    width: 200px;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(255, 0, 0, 0);
+    color: white;
+    resize: none;
+    font-size: 20px;
+}
+.form textarea:focus{
+    outline: none;
+}
+.form textarea::placeholder {
+    position: relative;
+    font-size: 20px;
+}
+
+.form button {
+    position: relative;
+    top: -80px;
+    left: 280px;
+    border-radius: 10px;
+    width: 80px;
+    background-color: rgb(255, 255, 255);
+}
+
+
+
+
+
 
 
 
@@ -484,6 +567,13 @@ p a:hover {
     .navBar span {
         opacity: 1;
     }
+
+    .body {
+        position: relative;
+        left: 201px;
+        transition: 1s ease-out;
+
+    }
 }
 
 @media (max-width: 1200px){
@@ -508,6 +598,13 @@ p a:hover {
     .navBar span{
         display: none;
         opacity: 1;
+    }
+
+    .body {
+        position: relative;
+        left: 81px;
+        transition: 1s ease-out;
+
     }
 }
 
@@ -548,6 +645,13 @@ p a:hover {
         transition: 1s ease-out;
 
     }
+
+    .body {
+        position: relative;
+        left: 201px;
+        transition: 1s ease-out;
+
+    }
 }
 
 @media (max-width:800px) {
@@ -572,6 +676,13 @@ p a:hover {
     .navBar ul li a {
         position: relative;
         left: 10px;
+        transition: 1s ease-out;
+
+    }
+
+    .body {
+        position: relative;
+        left: 81px;
         transition: 1s ease-out;
 
     }

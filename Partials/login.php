@@ -45,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <div class="container">
     <h2>Log in to Chirpify</h2>
     <?php if ($error) echo "<p class='error'>$error</p>"; ?>
-    <form action="login.php" method="POST">
+    <form action="post.php" method="POST">
         <label for="username">Username:</label>
         <input type="text" name="username" id="username" placeholder="Username" required>
 
